@@ -355,8 +355,10 @@ function sortDigitNamesByNumericOrder(arr) {
  *   [ -1, 1, -1, 1 ]      => 0
  *   [ 1, 10, 100, 1000 ]  => 1111
  */
-function getItemsSum(/* arr */) {
-  throw new Error('Not implemented');
+function getItemsSum(arr) {
+  let result = [];
+  result = arr.reduce((acc, item) => acc + item, 0);
+  return result;
 }
 
 /**
