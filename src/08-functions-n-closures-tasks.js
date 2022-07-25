@@ -174,8 +174,15 @@ function partialUsingArguments(/* fn, ...args1 */) {
  *   getId4() => 7
  *   getId10() => 11
  */
-function getIdGeneratorFunction(/* startFrom */) {
-  throw new Error('Not implemented');
+function getIdGeneratorFunction(startFrom) {
+  let memory = startFrom - 1;
+  if (memory) {
+    return () => {
+      memory += 1;
+      return memory;
+    };
+  }
+  return true;
 }
 
 
